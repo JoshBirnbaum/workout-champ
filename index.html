@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Champ</title>
+    <link rel="icon" type="image/png" href="JB.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Heading -->
+    <header>
+        <h1 id="heading"></h1>
+    </header>
+    <!-- Body -->
+    <div class="body-container">
+        <!-- Button -->
+        <div class="button-container">
+            <button id="show-modal">Edit Your Workout Plan!</button>
+        </div>
+        <!-- Workout Card -->
+        <div class="weekday-container">
+            <div class="title">
+                <h1 id="workout"></h1>
+            </div>
+            <div id="exercises" class="workout-container"></div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="modal" class="modal-container">
+        <div class="modal">
+            <i class="fas fa-times close-icon" id="close-modal"></i>
+            <div class="modal-header">
+                <h2>Edit Your Workout Plan</h2>
+            </div>
+            <div class="modal-content">
+                <h3>Choose a Weekday: </h3>
+                <div class="custom-select" style="width:200px;">
+                    <select name="weekdays" id="weekdays">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+                </div>
+                <div class="workout-type-input">
+                    <form id="workout-form">
+                        <h3>Type Of Workout: </h3>
+                        <input type="text" id="workout-type">
+                        <h3>Enter your exercises: </h3>
+                        <input type="text" onfocus="this.value=''" id="exercise">
+                        <div class="button-container">
+                            <button type="submit" class="modal-button">Add Exercise</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
